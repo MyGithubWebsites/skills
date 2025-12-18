@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Freelancer Portfolio</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
+        background: #0f172a;
+        color: #e5e7eb;
+    }
+
+    header {
+        padding: 30px;
+        background: linear-gradient(135deg, #2563eb, #1e40af);
+        text-align: center;
+    }
+
+    header h1 {
+        margin-bottom: 10px;
+        font-size: 32px;
+    }
+
+    header p {
+        max-width: 900px;
+        margin: auto;
+        line-height: 1.6;
+        font-size: 16px;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: 26px;
+        color: #93c5fd;
+    }
+
+    /* Horizontal scroll */
+    .skills-container {
+        display: flex;
+        overflow-x: auto;
+        gap: 20px;
+        padding-bottom: 20px;
+        scroll-behavior: smooth;
+    }
+
+    .skill-card {
+        min-width: 260px;
+        background: #1e293b;
+        border-radius: 15px;
+        padding: 15px;
+        box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        transition: transform 0.3s;
+    }
+
+    .skill-card:hover {
+        transform: scale(1.05);
+    }
+
+    .skill-img {
+        height: 150px;
+        background: #334155;
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: #94a3b8;
+        margin-bottom: 10px;
+    }
+
+    .skill-card h3 {
+        margin: 10px 0 5px;
+        color: #bfdbfe;
+    }
+
+    .skill-card p {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+
+    .experience {
+        margin-top: 8px;
+        font-size: 13px;
+        color: #a5b4fc;
+    }
+
+    /* Resume section */
+    .resume-box {
+        max-width: 600px;
+        margin: auto;
+        background: #1e293b;
+        padding: 25px;
+        border-radius: 15px;
+        text-align: center;
+    }
+
+    input[type="file"] {
+        margin-top: 15px;
+        color: #c7d2fe;
+    }
+
+    /* Personal info */
+    .info-box {
+        max-width: 700px;
+        margin: auto;
+        background: #1e293b;
+        padding: 30px;
+        border-radius: 15px;
+        line-height: 1.8;
+    }
+
+    footer {
+        background: #020617;
+        text-align: center;
+        padding: 20px;
+        font-size: 14px;
+        color: #94a3b8;
+    }
+
+    /* scrollbar */
+    .skills-container::-webkit-scrollbar {
+        height: 8px;
+    }
+    .skills-container::-webkit-scrollbar-thumb {
+        background: #2563eb;
+        border-radius: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<header>
+    <h1>I Am Looking For Freelancing Work That PAYS</h1>
+    <p>
+        I am available 24/7 for paid freelancing work.  
+        Call me anytime if you have any project or requirement.
+        <br><br>
+        <strong>Contact:</strong> +91 9959619465
+    </p>
+</header>
+
+<section>
+<h2>My Skills (Scroll Left ➜ Right)</h2>
+
+<div class="skills-container" id="skills"></div>
+</section>
+
+<section>
+<h2>Upload Resume</h2>
+<div class="resume-box">
+    <p>You can upload your resume here (for future backend integration).</p>
+    <input type="file" accept=".pdf,.doc,.docx">
+</div>
+</section>
+
+<section>
+<h2>Personal Information</h2>
+<div class="info-box">
+    <p><strong>Name:</strong> Freelancer</p>
+    <p><strong>Availability:</strong> 24/7</p>
+    <p><strong>Contact Number:</strong> +91 9959619465</p>
+    <p><strong>Work Type:</strong> Paid Freelancing Only</p>
+    <p><strong>Skills:</strong> Web Development, Design, Writing, Editing, AI, Testing, Management & More</p>
+</div>
+</section>
+
+<footer>
+    © 2025 Freelancing Portfolio | Available 24/7
+</footer>
+
+<script>
+const skills = [
+"Website Development","UI / UX Design","Data Entry","Data Analysis (Excel, Tableau)",
+"Blog Writing","Copywriting","Social Media Profile Management","Social Media Content Creation",
+"Scriptwriting","Technical Writing","Image Editing","Video Editing","Resume Writing",
+"Logo Making","2D Animation Making","Voice Over","Recruitment","Virtual Assistance",
+"Project Management","Online Tutoring","App Testing","Manual App Testing",
+"Watchface Testing","AI Prompt Engineering","AI Data Labeling","Podcast Editing",
+"Audio Transcription","Public Speaking Tutoring","LinkedIn Profile Optimization",
+"Discord Server Setup & Moderation","PPT Making","Assignment Writing",
+"Final Year Project Creation","News Anchoring (Voice Only)",
+"Music Spotify Creation & Account Handling","Portfolio Creation",
+"Radio Station Host (Private Channel)","Email Spamming",
+"Comic Creation","Fake Feedback Generation","Goth Sketching",
+"Unity Game Creation","Print On Demand T-Shirt Design"
+];
+
+const container = document.getElementById("skills");
+
+skills.forEach(skill => {
+    const card = document.createElement("div");
+    card.className = "skill-card";
+    card.innerHTML = `
+        <div class="skill-img">Image Placeholder</div>
+        <h3>${skill}</h3>
+        <p>Professional service delivered with quality, dedication, and client satisfaction.</p>
+        <div class="experience">Experience: 1+ Years</div>
+    `;
+    container.appendChild(card);
+});
+</script>
+
+</body>
+</html>
